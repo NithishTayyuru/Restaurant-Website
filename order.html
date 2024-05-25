@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap">
+    <style>
+        body {
+            font-family: "Roboto", Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .container:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #ff5733;
+        }
+        .order-summary {
+            margin-bottom: 20px;
+        }
+        .order-summary h2 {
+            color: #183b56;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .order-summary ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .order-summary ul li {
+            color: #323f4b;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .total-price {
+            font-weight: bold;
+            text-align: right;
+            color: #183b56;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        .billing-info, .shipping-info {
+            margin-bottom: 20px;
+        }
+        .billing-info h2, .shipping-info h2 {
+            color: #183b56;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .billing-info ul, .shipping-info ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .billing-info ul li, .shipping-info ul li {
+            color: #323f4b;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .order-details {
+            color: #323f4b;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .background-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .food-images {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .food-images img {
+            width: 48%;
+            border-radius: 10px;
+        }
+        button {
+    background-color: #007BFF; 
+    color: white; 
+    padding: 15px 32px; 
+    text-align: center; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 8px; 
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    outline: none; 
+    cursor: pointer; 
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2); 
+}
+
+button:hover {
+    background-color: #0056b3; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3); 
+    transform: translateY(-2px); 
+}
+
+button:active {
+    background-color: #004085;
+    transform: translateY(1px); 
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2); 
+}
+
+    </style>
+     <script src="js.js"></script>
+</head>
+<body >
+    <div class="container">
+        <h1>Order Confirmation</h1>
+
+        <div class="food-images">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg" alt="Food Image 1">
+            <img src="https://i.ndtvimg.com/i/2017-08/indian-food_650x400_81501923865.jpg" alt="Food Image 2">
+        </div>
+        <button onclick="last()" class=".conbutton">Confirm Order</button>
+        <div class="order-summary" >
+            <h2>Order Summary</h2>
+            <ul id="ulitem"> </ul>  
+        </div>
+
+        <div class="total-price">
+            <p><strong>Total Price:</strong><span id="price"></span> (Including all items)</p>
+        </div>
+
+        <div class="billing-info">
+            <h2>Billing Information</h2>
+            <ul>
+                <li><strong>Name:</strong>Nithish</li>
+                <li><strong>Email:</strong>nithish@gmail.com</li>
+                <li><strong>Address:</strong>A Block, 2nd Floor, Collectorate, Vellore – 632009. </li>
+                <li><strong>Payment Method:</strong>COD</li>
+            </ul>
+        </div>
+
+        <div class="shipping-info">
+            <h2>Shipping Information</h2>
+            <ul>
+                <li><strong>Shipping Address:</strong>A Block, 2nd Floor, Collectorate, Vellore – 632009. </li>
+                <li><strong>Shipping Method:</strong>Door Delivery</li>
+            </ul>
+        </div>
+
+        <div class="order-details">
+            <p><strong>Order Number:</strong>#21abeuwhd342kk</p>
+            <p><strong>Estimated Delivery Date:</strong>2020-2-21</p>
+        </div>
+
+        <img class="background-image" src="https://cdn.create.vista.com/downloads/e6aee89d-bc04-46c0-a953-935af1f6f7f7_1024.jpeg" alt="Background Image">
+    </div>
+   
+</body>
+</html>

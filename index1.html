@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+        <script src="js.js"></script>
+    </head>
+    <body>
+        
+        <div class="order-menu-section pt-5 pb-5" id="orderItemsSection">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="menu-section-heading">Explore Menu</h1>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div  class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-ginger-fried-img.png" class="menu-item-image w-100" />
+                    <h1 class="menu-card-title" id="non-veg" value="Non-Veg Starter">Non-Veg Starters</h1>
+                    <button class="add-btn" onclick="added();add_cart('non-veg')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="shadow menu-item-card p-3 mb-3">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-veg-starters-img.png" class="menu-item-image w-100" />
+                    <h1 class="menu-card-title" id="veg" value="Veg Starter">Veg Starters</h1>
+                    <button class="add-btn" onclick="added();add_cart('veg')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="menu-item-card shadow p-3 mb-3">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-soup-img.png" class="menu-item-image w-100" />
+                    <h1 class="menu-card-title" id="soup" value="Soups">Soups</h1>
+                    <button class="add-btn" onclick="added();add_cart('soup')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="menu-item-card shadow p-3 mb-3">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-grilled-seafood-img.png" class="menu-item-image w-100" />
+                    <h1 class="menu-card-title" id="fish" value="Fish & Sea Food">Fish & Sea food</h1>
+                    <button class="add-btn" onclick="added();add_cart('fish')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="menu-item-card shadow p-3 mb-3">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-hyderabadi-biryani-img.png" class="menu-item-image w-100" />
+                    <h1 class="menu-card-title" id="main" value="Main Course">Main Course</h1>
+                    <button class="add-btn" onclick="added();add_cart('main')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="menu-item-card shadow p-3 mb-3">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-mushroom-noodles-img.png" class="menu-item-image w-100" />
+                    <h1 class="menu-card-title" id="noodles" value="Noodles">Noodles</h1>
+                    <button class="add-btn" onclick="added();add_cart('noodles')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="menu-item-card shadow p-3 mb-3">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-gluten-img.png" class="menu-item-image w-100" />
+                    <h1 class="menu-card-title" id="salads" value="Salads">Salads</h1>
+                    <button class="add-btn" onclick="added();add_cart('salads')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="menu-item-card shadow p-3 mb-3">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-coffee-bourbon-img.png" class="menu-item-image w-100" />
+                    <h1 class="menu-card-title" id="deserts" value="Desserts">Desserts</h1>
+                    <button class="add-btn" onclick="added();add_cart('deserts')">Add to Cart</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-flex flex-row justify-content-center">
+    <a href="order.html"><button class="checkout-btn" onclick="displaybill()">Check Out</button></a>
+</div>
+</body>
+</html>
